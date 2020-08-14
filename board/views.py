@@ -11,6 +11,7 @@ from django.forms.models import model_to_dict
 import math
 
 
+
 def index(request):
     return render(request, 'index.html')
 
@@ -26,6 +27,7 @@ def signup(request):
         user.save()
         return HttpResponseRedirect('/index/')
     #회원가입을 위한 양식(HTML) 전송
+    
     return render(request, 'signup.html')
 
 
